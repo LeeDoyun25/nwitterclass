@@ -4,12 +4,16 @@ import Home from "./routes/home";
 import Profile from "./routes/profile";
 import Login from "./routes/login";
 import Create_Account from "./routes/createaccount";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/loadingscreen";
 import { auth } from "./routes/firebase";
-
+const Wrapper=styled.div`
+height:100%;
+display: flex;
+justify-content: center;
+`;
 const Router=createBrowserRouter([
   {
     path:'/',
@@ -44,6 +48,6 @@ function App() {
     setLoading(false);
   };
   useEffect(()=>{init()},[]);
-  return (<><GlobalStyle/>{isLoading?<LoadingScreen/>:<RouterProvider router={Router}/>}</>);
+  return (<Wrapper><GlobalStyle/>{isLoading?<LoadingScreen/>:<RouterProvider router={Router}/>}</Wrapper>);
 };
 export default App;
