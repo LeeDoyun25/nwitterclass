@@ -24,6 +24,8 @@ border: none;
 width: 100%;
 font-size: 16px;
 &[type='submit']{
+    color: white;
+    background-color: #1d9bf0;
     cursor: pointer;
     &hover{
         opacity: 0.8;

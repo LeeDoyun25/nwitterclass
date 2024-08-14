@@ -4,6 +4,7 @@ import { FirebaseError } from "firebase/app";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import { Error, Input, Switcher, Title, Wrapper,Form } from "../components/authcomponent";
+import GithubBtn from "../components/githubbtn";
 export default function Create_Account(){
     const navigate=useNavigate();
     const [isLoading,setLoading]=useState(false);
@@ -45,5 +46,6 @@ export default function Create_Account(){
         </Form>
         {error!==''?<Error>{error}</Error>:null}
         <Switcher>Don't have an account?<Link to={"/createaccount"}>Create One! &rarr;</Link></Switcher>
+        <GithubBtn/>
     </Wrapper>;
 };
