@@ -8,7 +8,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/loadingscreen";
-import { auth } from "./routes/firebase";
+import { auth } from "./firebase";
 import ProtectedRoute from "./components/protected-route";
 const Wrapper=styled.div`
 height:100%;
