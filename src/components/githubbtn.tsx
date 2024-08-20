@@ -32,5 +32,5 @@ export default function GithubBtn(){
             console.error(e);
         };
     };    
-    return <Button onClick={onclick}><Logo src="/public/github-mark.svg"/>Continue With Github</Button>
+    return <Button onClick={onclick}><Logo src='src\components\github-mark.svg'/>Continue With Github</Button>
 };
